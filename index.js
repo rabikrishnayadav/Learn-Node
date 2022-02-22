@@ -15,7 +15,7 @@ const fs = require('fs'); // including file system code module
 // write the require data at installing time
 
 // use chalk dependency
-    // const chalk = require('chalk');
+    // const chalk = require('./chalk');
     // const log = console.log;
     // // Combine styled and normal strings
     // log(chalk.blue('Hello') + ' World' + chalk.red('!'));
