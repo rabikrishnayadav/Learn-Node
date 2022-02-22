@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rabikryadav/Learn-Node/issues"
   },
-  "homepage": "https://github.com/rabikryadav/Learn-Node#readme"
+  "homepage": "https://github.com/rabikryadav/Learn-Node#readme",
+  "dependencies": {
+    "chalk": "^5.0.0"
+  }
 }
