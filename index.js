@@ -9,3 +9,7 @@ console.log(name);
 console.log(add(5, 5));
 console.log(sub(8,2));
 console.log(mult(8,2));
+
+// for use npm
+// write 'npm init' in command line
+// write the require data at installing time
