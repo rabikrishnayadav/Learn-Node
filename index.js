@@ -1,21 +1,27 @@
 console.log('welcome to learn node');
 
-// CRUD Operation Using FS Module
+// CRUD Operation Using FS Module using async
 
 const fs = require('fs'); // including file system code module
 
-// 1: Create a folder
-    fs.mkdirSync('FileSystem');
-// 2: Create a file with some data
-    fs.writeFileSync('filesystem/bio.txt','name:rabi kryadav');
-// 3: Update Data into the file at the end of the existing data.
-    fs.appendFileSync('filesystem/bio.txt',' course:node');
-// 4: Read the data without getting buffer data at first.
-    const data = fs.readFileSync('filesystem/bio.txt','utf-8');
+// for create file
+fs.writeFile('read.txt','This file is created with async method', (err) => {
+    console.log('file is created');
+    console.log(err);
+});
+
+// here we pass them a function as an argument a callback that gets called when that task completes.
+// the callback has an argument that tells you whether the operation completed successfully.
+// Now we need to say wheat to do when fs.writeFile has completed (even if it's nothing), and start checking for errors.
+
+// for update file data
+fs.appendFile('read.txt','This is rabi', (err) => {
+    console.log('file is updated');
+    console.log(err);
+});
+
+// for read file data
+fs.readFile('read.txt','utf-8', (err, data) => {
     console.log(data);
-// 5: Reaname the file name
-    fs.renameSync('filesystem/bio.txt','filesystem/bioData.txt')
-// 6: Delete file and folder 
-    // fs.rmSync('filesystem/bioData.txt');         // first method
-    // fs.unlinkSync('filesystem/bioData.txt');     // second method
-    // fs.rmdirSync('FileSystem');      // for delete folder
+    console.log(err);
+});
