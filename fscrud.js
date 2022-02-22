@@ -1,11 +1,9 @@
-console.log('welcome to learn node');
-
 // CRUD Operation Using FS Module
 
 const fs = require('fs'); // including file system code module
 
 // 1: Create a folder
-    fs.mkdirSync('FileSystem');
+    // fs.mkdirSync('FileSystem');
 // 2: Create a file with some data
     fs.writeFileSync('filesystem/bio.txt','name:rabi kryadav');
 // 3: Update Data into the file at the end of the existing data.
