@@ -21,6 +21,10 @@ const fs = require('fs'); // including file system code module
  
 // CRUD Operation Using FS Module with Asynchoronus Method
     
+// here we pass them a function as an argument a callback that gets called when that task completes.
+// the callback has an argument that tells you whether the operation completed successfully.
+// Now we need to say wheat to do when fs.writeFile has completed (even if it's nothing), and start checking for errors.
+
     // 1: Create a folder
         fs.mkdir('filesys', (err) => {
             console.log('folder created');
