@@ -56,7 +56,16 @@ If the respose from the HTTP server is supposed to be displayed as HTML, we shou
 const http = require('http');
 
 const server = http.createServer((req, res) => {
-    res.end('Hello from the other sides with node');
+    if(req.url == '/'){
+    res.end('Hello from the main server sides with node');
+    }else if(req.url == '/about'){
+    res.end('Hello from the about sides with node');
+    }else if(req.url == '/contact'){
+    res.end('Hello from the contact sides with node');
+    }else{
+        res.writeHead(404, {"Content-type" : "text/html"});
+        res.end('<h1>404 error page. page does not exits</h1>');
+    }
 });
 
 server.listen(8000,'127.0.0.1', () => {
