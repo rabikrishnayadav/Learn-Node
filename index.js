@@ -26,5 +26,3 @@ const fs = require('fs'); // including file system code module
 
     // const res = validator.isEmail("rabi@mail.com");
     // console.log(res);
-
-    
