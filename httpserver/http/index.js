@@ -23,6 +23,7 @@ If the respose from the HTTP server is supposed to be displayed as HTML, we shou
 */
 
 const http = require('http');
+const fs = require('fs');
 
 const server = http.createServer((req, res) => {
     if(req.url == '/'){
